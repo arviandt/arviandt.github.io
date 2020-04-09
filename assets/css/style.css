@@ -51,7 +51,7 @@
 
 .cursor {
   position: fixed;
-  background-color: #fff;
+  background-color: rgba(73, 170, 183, 1);
   width: 6px;
   height: 6px;
   border-radius: 100%;
@@ -73,7 +73,7 @@
 
 .cursor-follower {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(73, 170, 183, 0.3);
   width: 20px;
   height: 20px;
   border-radius: 100%;
