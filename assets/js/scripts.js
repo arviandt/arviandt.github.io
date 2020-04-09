@@ -1,14 +1,4 @@
 /*---------------------------------------------
-Template name:  Drogency
-Version:        1.0
-Author:         ThemeLooks
-Author url:     http://themelooks.com
-
-NOTE:
-------
-Please DO NOT EDIT THIS JS, you may need to use "custom.js" file for writing your custom js.
-We may release future updates so it will overwrite this file. it's better and safer to use "custom.js".
-
 [Table of Content]
 
 01: Defaults
@@ -395,15 +385,20 @@ We may release future updates so it will overwrite this file. it's better and sa
             nav: checkData( $t.data('owl-nav'), false ),
             navText: ['<i class="fa fa-angle-left"></i> Prev', 'Next <i class="fa fa-angle-right"></i>'],
             dots: checkData( $t.data('owl-dots'), false ),
+            dotsData: checkData( $t.data('owl-dots-data'), true ),
             responsive: checkData( $t.data('owl-responsive'), {} ),
             mouseDrag: checkData($t.data('owl-mouse-drag'), false)
         });
+
+        $('.owl-dot').click(function() {
+            $t.trigger('to.owl.carousel', [$(this).index(), 1000]);
+        })
     });
 
     /* 09: Preloader
     ==============================================*/
     $(window).on('load', function () {
-        $('.preloader').fadeOut(2000);
+        $('.loading-screen').fadeOut(2000);
     });
 
     /* 10: Back to Top

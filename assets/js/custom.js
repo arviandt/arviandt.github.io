@@ -63,3 +63,11 @@ $(".owl-prev").on("mouseleave", function() {
     cursor.removeClass("active");
     follower.removeClass("active");
 });
+$(".owl-dot").on("mouseenter", function() {
+    cursor.addClass("active");
+    follower.addClass("active");
+});
+$(".owl-dot").on("mouseleave", function() {
+    cursor.removeClass("active");
+    follower.removeClass("active");
+});
