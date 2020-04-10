@@ -398,6 +398,7 @@
     /* 09: Preloader
     ==============================================*/
     $(window).on('load', function () {
+        $('body').css('overflow','visible');
         $('.loading-screen').fadeOut(2000);
     });
 
