@@ -357,13 +357,14 @@ body {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: #141414;
+  border: 2px solid #141414;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   cursor: none;
 }
 .arviandt--owl-btn .owl-dots .owl-dot:hover, .arviandt--owl-btn .owl-dots .owl-dot.active {
   background-color: rgba(73, 170, 183, 1);
+  border: 2px solid rgba(73, 170, 183, 1);
 }
 .btn-style-right, .arviandt--rm-btn, .arviandt--owl-btn .owl-nav .owl-next {
   font-size: 16px !important;
