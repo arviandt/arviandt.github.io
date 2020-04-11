@@ -71,3 +71,7 @@ $(".owl-dot").on("mouseleave", function() {
     cursor.removeClass("active");
     follower.removeClass("active");
 });
+
+particlesJS.load('particles-js', 'assets/js/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
