@@ -69,18 +69,21 @@
     var $canclose = $('.arviandt--off-canvas-toggle');
 
     $canclose.on('click', function(){
-        $canvas.addClass('show');
-        $canol.addClass('show');
+        $canvas.toggleClass('show');
+        $canol.toggleClass('show');
+        $canclose.toggleClass('open');
     });
 
     $canvas.find('.arviandt--off-canvas-close').on('click', function(){
         $canvas.removeClass('show');
         $canol.removeClass('show');
+        $canclose.removeClass('open');
     });
 
     $canol.on('click', function(){
         $canvas.removeClass('show');
         $canol.removeClass('show');
+        $canclose.removeClass('open');
     });
 
     /* 04: Navbar
@@ -134,6 +137,8 @@
     ==============================================*/
     var $grid = $('.isotope').isotope({
         itemSelector: '.arviandt--filter-item',
+        layoutMode: 'horiz',
+        containerStyle: null
     });
 
     $('.arviandt--project-filter-buttons').on( 'click', 'button', function() {

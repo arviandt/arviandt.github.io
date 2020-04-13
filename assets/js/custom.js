@@ -73,5 +73,46 @@ $(".owl-dot").on("mouseleave", function() {
 });
 
 particlesJS.load('particles-js', 'assets/js/particles.json', function() {
-    console.log('callback - particles.js config loaded');
+    // console.log('callback - particles.js config loaded');
+  });
+
+$('#fullpage').fullpage({
+    onLeave: function(origin, destination, direction){
+		if(origin.index == 1 && direction =='up'){
+			$('.arviandt--mobile-nav ul li .arviandt--off-canvas-toggle .line').css('background-color','white');
+		} else {
+            $('.arviandt--mobile-nav ul li .arviandt--off-canvas-toggle .line').css('background-color','#141414');
+        }
+	}
+});
+
+$('.arviandt--project-filter-items .project-container').hover(function(e) {
+    var container = $(this).parent();
+    console.log((e.pageX - this.offsetLeft))
+    console.log(container.width() / 2)
+    if ((e.pageX - this.offsetLeft) < container.width() / 2) {
+        console.log('left')
+      var direction = function() {
+        container.stop().animate({
+          scrollLeft: '-=100'
+        }, 200, 'linear', direction);
+      }
+      container.stop().animate({
+        scrollLeft: '-=100'
+      }, 200, 'linear', direction);
+    } else {
+        console.log('right')
+      var direction = function() {
+        container.stop().animate({
+          scrollLeft: '+=100'
+        }, 200, 'linear', direction);
+      }
+      container.stop().animate({
+        scrollLeft: '+=100'
+      }, 200, 'linear', direction);
+    }
+  
+  }, function() {
+          var container = $(this).parent();
+          container.stop();
   });
